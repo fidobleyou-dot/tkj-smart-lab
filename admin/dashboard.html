@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dashboard Admin | TKJ Smart Lab</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/dashboard.css"
+  >
+</head>
+
+
+<body class="dashboard-page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="brand-icon">
+        TKJ
+      </div>
+
+      <div>
+        <strong>TKJ SMART LAB</strong>
+        <span>Administrator</span>
+      </div>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+      <div class="menu-title">
+        UTAMA
+      </div>
+
+      <a href="#" class="menu-item active">
+        <span>▦</span>
+        <span>Dashboard</span>
+      </a>
+
+
+      <div class="menu-title">
+        DATA AKADEMIK
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>👨‍🎓</span>
+        <span>Data Siswa</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>👨‍🏫</span>
+        <span>Data Guru</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>🏫</span>
+        <span>Data Kelas</span>
+      </a>
+
+
+      <div class="menu-title">
+        PEMBELAJARAN
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>📚</span>
+        <span>Materi</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>🖥️</span>
+        <span>Praktikum</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📝</span>
+        <span>Tugas</span>
+      </a>
+
+
+      <div class="menu-title">
+        MONITORING
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>📊</span>
+        <span>Nilai</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📈</span>
+        <span>Progress Siswa</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📢</span>
+        <span>Pengumuman</span>
+      </a>
+
+
+      <div class="menu-title">
+        SISTEM
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>💾</span>
+        <span>Backup Data</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>⚙️</span>
+        <span>Pengaturan</span>
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <button
+        class="logout-button"
+        onclick="logout()"
+      >
+        <span>↪</span>
+        Keluar
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+
+
+    <!-- HEADER -->
+    <header class="dashboard-header">
+
+      <div>
+
+        <button
+          class="mobile-menu-button"
+          onclick="toggleSidebar()"
+        >
+          ☰
+        </button>
+
+        <div class="page-heading">
+
+          <span>
+            ADMINISTRATOR
+          </span>
+
+          <h1>
+            Dashboard
+          </h1>
+
+        </div>
+
+      </div>
+
+
+      <div class="header-profile">
+
+        <div class="notification">
+          🔔
+          <span>0</span>
+        </div>
+
+        <div class="profile-info">
+
+          <strong>
+            Administrator
+          </strong>
+
+          <span>
+            Super Admin
+          </span>
+
+        </div>
+
+        <div class="profile-avatar">
+          AD
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <section class="dashboard-content">
+
+
+      <!-- WELCOME -->
+      <div class="welcome-card">
+
+        <div>
+
+          <span class="welcome-label">
+            ADMINISTRATOR PANEL
+          </span>
+
+          <h2>
+            Selamat datang di pusat kontrol TKJ Smart Lab 👋
+          </h2>
+
+          <p>
+            Kelola pengguna, data akademik, pembelajaran,
+            dan aktivitas sistem dari satu tempat.
+          </p>
+
+        </div>
+
+
+        <div class="welcome-icon">
+          ⚙️
+        </div>
+
+      </div>
+
+
+      <!-- STATISTIK -->
+      <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            👨‍🎓
+          </div>
+
+          <div>
+
+            <span>
+              Total Siswa
+            </span>
+
+            <strong>
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            👨‍🏫
+          </div>
+
+          <div>
+
+            <span>
+              Total Guru
+            </span>
+
+            <strong>
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            🏫
+          </div>
+
+          <div>
+
+            <span>
+              Total Kelas
+            </span>
+
+            <strong>
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            🟢
+          </div>
+
+          <div>
+
+            <span>
+              Pengguna Aktif
+            </span>
+
+            <strong>
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- GRID -->
+      <div class="dashboard-grid">
+
+
+        <!-- AKTIVITAS -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <div>
+
+              <span class="card-label">
+                SISTEM
+              </span>
+
+              <h3>
+                Aktivitas Terbaru
+              </h3>
+
+            </div>
+
+            <button>
+              Lihat Semua
+            </button>
+
+          </div>
+
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              📋
+            </div>
+
+            <strong>
+              Belum ada aktivitas
+            </strong>
+
+            <p>
+              Aktivitas pengguna akan muncul
+              setelah sistem mulai digunakan.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- PENGGUNA -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <div>
+
+              <span class="card-label">
+                PENGGUNA
+              </span>
+
+              <h3>
+                Pengguna Terbaru
+              </h3>
+
+            </div>
+
+            <button>
+              Kelola
+            </button>
+
+          </div>
+
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              👥
+            </div>
+
+            <strong>
+              Belum ada pengguna
+            </strong>
+
+            <p>
+              Guru dan siswa yang terdaftar
+              akan tampil di sini.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- QUICK ACTION -->
+      <div class="quick-section">
+
+        <div class="section-heading">
+
+          <span>
+            ADMINISTRASI
+          </span>
+
+          <h2>
+            Akses Cepat
+          </h2>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+
+          <button class="quick-card">
+
+            <div>
+              👨‍🎓
+            </div>
+
+            <strong>
+              Kelola Siswa
+            </strong>
+
+            <span>
+              Tambah dan kelola data siswa
+            </span>
+
+          </button>
+
+
+          <button class="quick-card">
+
+            <div>
+              👨‍🏫
+            </div>
+
+            <strong>
+              Kelola Guru
+            </strong>
+
+            <span>
+              Kelola akun dan data guru
+            </span>
+
+          </button>
+
+
+          <button class="quick-card">
+
+            <div>
+              🏫
+            </div>
+
+            <strong>
+              Kelola Kelas
+            </strong>
+
+            <span>
+              Atur kelas dan jurusan
+            </span>
+
+          </button>
+
+
+          <button class="quick-card">
+
+            <div>
+              ⚙️
+            </div>
+
+            <strong>
+              Pengaturan Sistem
+            </strong>
+
+            <span>
+              Konfigurasi TKJ Smart Lab
+            </span>
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    function toggleSidebar() {
+
+      document
+        .querySelector(".sidebar")
+        .classList.toggle("show");
+
+    }
+
+
+    function logout() {
+
+      const yakin =
+        confirm(
+          "Apakah Anda yakin ingin keluar?"
+        );
+
+      if (yakin) {
+
+        window.location.href =
+          "../login.html";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+  </html>
