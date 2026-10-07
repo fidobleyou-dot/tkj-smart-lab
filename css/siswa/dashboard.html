@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dashboard Siswa | TKJ Smart Lab</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/dashboard.css"
+  >
+</head>
+
+
+<body class="dashboard-page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="brand-icon">
+        TKJ
+      </div>
+
+      <div>
+        <strong>TKJ SMART LAB</strong>
+        <span>Siswa</span>
+      </div>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+      <div class="menu-title">
+        PEMBELAJARAN
+      </div>
+
+      <a href="#" class="menu-item active">
+        <span>▦</span>
+        <span>Dashboard</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📚</span>
+        <span>Materi</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>🖥️</span>
+        <span>Praktikum</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📝</span>
+        <span>Tugas</span>
+      </a>
+
+
+      <div class="menu-title">
+        HASIL BELAJAR
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>📊</span>
+        <span>Nilai Saya</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📈</span>
+        <span>Progress Belajar</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>🏆</span>
+        <span>Pencapaian</span>
+      </a>
+
+
+      <div class="menu-title">
+        INFORMASI
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>📢</span>
+        <span>Pengumuman</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>👤</span>
+        <span>Profil Saya</span>
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <button
+        class="logout-button"
+        onclick="logout()"
+      >
+        <span>↪</span>
+        Keluar
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+
+
+    <!-- HEADER -->
+    <header class="dashboard-header">
+
+      <div>
+
+        <button
+          class="mobile-menu-button"
+          onclick="toggleSidebar()"
+        >
+          ☰
+        </button>
+
+        <div class="page-heading">
+
+          <span>
+            PANEL SISWA
+          </span>
+
+          <h1>
+            Dashboard
+          </h1>
+
+        </div>
+
+      </div>
+
+
+      <div class="header-profile">
+
+        <div class="notification">
+          🔔
+          <span>0</span>
+        </div>
+
+        <div class="profile-info">
+
+          <strong>
+            Siswa TKJ
+          </strong>
+
+          <span>
+            X TKJ
+          </span>
+
+        </div>
+
+        <div class="profile-avatar">
+          ST
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <section class="dashboard-content">
+
+
+      <!-- WELCOME -->
+      <div class="welcome-card">
+
+        <div>
+
+          <span class="welcome-label">
+            SELAMAT DATANG
+          </span>
+
+          <h2>
+            Halo, Siswa TKJ! 👋
+          </h2>
+
+          <p>
+            Siapkan diri untuk belajar, praktik,
+            dan mengembangkan kemampuan jaringan komputer.
+          </p>
+
+        </div>
+
+
+        <div class="welcome-icon">
+          🎓
+        </div>
+
+      </div>
+
+
+      <!-- STATISTIK -->
+      <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            📚
+          </div>
+
+          <div>
+
+            <span>
+              Materi Selesai
+            </span>
+
+            <strong>
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            🖥️
+          </div>
+
+          <div>
+
+            <span>
+              Praktikum
+            </span>
+
+            <strong>
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            📝
+          </div>
+
+          <div>
+
+            <span>
+              Tugas Aktif
+            </span>
+
+            <strong>
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            🏆
+          </div>
+
+          <div>
+
+            <span>
+              Rata-rata Nilai
+            </span>
+
+            <strong>
+              -
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- GRID UTAMA -->
+      <div class="dashboard-grid">
+
+
+        <!-- PRAKTIKUM -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <div>
+
+              <span class="card-label">
+                PRAKTIKUM
+              </span>
+
+              <h3>
+                Praktikum Terbaru
+              </h3>
+
+            </div>
+
+            <button>
+              Lihat Semua
+            </button>
+
+          </div>
+
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              🖥️
+            </div>
+
+            <strong>
+              Belum ada praktikum
+            </strong>
+
+            <p>
+              Praktikum dari guru akan muncul
+              di sini.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- TUGAS -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <div>
+
+              <span class="card-label">
+                TUGAS
+              </span>
+
+              <h3>
+                Tugas Saya
+              </h3>
+
+            </div>
+
+            <button>
+              Lihat Semua
+            </button>
+
+          </div>
+
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              📝
+            </div>
+
+            <strong>
+              Belum ada tugas
+            </strong>
+
+            <p>
+              Tugas yang diberikan guru akan
+              muncul di bagian ini.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- PROGRESS -->
+      <div class="dashboard-card progress-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <span class="card-label">
+              PERKEMBANGAN
+            </span>
+
+            <h3>
+              Progress Belajar
+            </h3>
+
+          </div>
+
+          <span class="progress-percent">
+            0%
+          </span>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+          <div
+            class="progress-fill"
+            style="width: 0%;"
+          ></div>
+
+        </div>
+
+
+        <p class="progress-text">
+          Mulai pelajaran pertama untuk
+          membangun progress belajar Anda.
+        </p>
+
+      </div>
+
+
+      <!-- PENGUMUMAN -->
+      <div class="dashboard-card announcement-card">
+
+        <div class="card-header">
+
+          <div>
+
+            <span class="card-label">
+              INFORMASI
+            </span>
+
+            <h3>
+              Pengumuman Guru
+            </h3>
+
+          </div>
+
+        </div>
+
+
+        <div class="empty-state">
+
+          <div class="empty-icon">
+            📢
+          </div>
+
+          <strong>
+            Belum ada pengumuman
+          </strong>
+
+          <p>
+            Informasi dari guru akan muncul
+            di sini.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    function toggleSidebar() {
+
+      document
+        .querySelector(".sidebar")
+        .classList.toggle("show");
+
+    }
+
+
+    function logout() {
+
+      const yakin =
+        confirm(
+          "Apakah Anda yakin ingin keluar?"
+        );
+
+      if (yakin) {
+
+        window.location.href =
+          "../login.html";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
