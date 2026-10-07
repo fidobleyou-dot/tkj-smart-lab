@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dashboard Guru | TKJ Smart Lab</title>
+
+  <link
+    rel="stylesheet"
+    href="../css/style.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../css/dashboard.css"
+  >
+</head>
+
+
+<body class="dashboard-page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="brand-icon">
+        TKJ
+      </div>
+
+      <div>
+        <strong>TKJ SMART LAB</strong>
+        <span>Guru</span>
+      </div>
+
+    </div>
+
+
+    <nav class="sidebar-menu">
+
+      <div class="menu-title">
+        PEMBELAJARAN
+      </div>
+
+      <a href="#" class="menu-item active">
+        <span>▦</span>
+        <span>Dashboard</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>👥</span>
+        <span>Kelas Saya</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📚</span>
+        <span>Materi</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>🖥️</span>
+        <span>Praktikum</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📝</span>
+        <span>Tugas</span>
+      </a>
+
+
+      <div class="menu-title">
+        PENILAIAN
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>📊</span>
+        <span>Nilai Siswa</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>📈</span>
+        <span>Progress Siswa</span>
+      </a>
+
+
+      <div class="menu-title">
+        LAINNYA
+      </div>
+
+      <a href="#" class="menu-item">
+        <span>📢</span>
+        <span>Pengumuman</span>
+      </a>
+
+      <a href="#" class="menu-item">
+        <span>⚙️</span>
+        <span>Pengaturan</span>
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <button
+        class="logout-button"
+        onclick="logout()"
+      >
+        <span>↪</span>
+        Keluar
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+
+
+    <!-- TOPBAR -->
+    <header class="dashboard-header">
+
+      <div>
+
+        <button
+          class="mobile-menu-button"
+          onclick="toggleSidebar()"
+        >
+          ☰
+        </button>
+
+        <div class="page-heading">
+
+          <span>
+            PANEL GURU
+          </span>
+
+          <h1>
+            Dashboard
+          </h1>
+
+        </div>
+
+      </div>
+
+
+      <div class="header-profile">
+
+        <div class="notification">
+          🔔
+          <span>2</span>
+        </div>
+
+        <div class="profile-info">
+
+          <strong>
+            Guru TKJ
+          </strong>
+
+          <span>
+            Guru / Wali Kelas
+          </span>
+
+        </div>
+
+        <div class="profile-avatar">
+          GT
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <section class="dashboard-content">
+
+
+      <!-- WELCOME -->
+      <div class="welcome-card">
+
+        <div>
+
+          <span class="welcome-label">
+            SELAMAT DATANG
+          </span>
+
+          <h2>
+            Selamat datang di TKJ Smart Lab 👋
+          </h2>
+
+          <p>
+            Kelola pembelajaran, praktikum, tugas,
+            dan perkembangan siswa dari satu tempat.
+          </p>
+
+        </div>
+
+
+        <div class="welcome-icon">
+          🖥️
+        </div>
+
+      </div>
+
+
+      <!-- STATISTICS -->
+      <div class="stats-grid">
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            👥
+          </div>
+
+          <div>
+            <span>Total Siswa</span>
+            <strong>0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            📚
+          </div>
+
+          <div>
+            <span>Materi</span>
+            <strong>0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            🖥️
+          </div>
+
+          <div>
+            <span>Praktikum</span>
+            <strong>0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon">
+            📝
+          </div>
+
+          <div>
+            <span>Tugas Aktif</span>
+            <strong>0</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- GRID -->
+      <div class="dashboard-grid">
+
+
+        <!-- AKTIVITAS -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <div>
+              <span class="card-label">
+                AKTIVITAS
+              </span>
+
+              <h3>
+                Aktivitas Terbaru
+              </h3>
+            </div>
+
+            <button>
+              Lihat Semua
+            </button>
+
+          </div>
+
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              📋
+            </div>
+
+            <strong>
+              Belum ada aktivitas
+            </strong>
+
+            <p>
+              Aktivitas siswa akan muncul di sini
+              setelah sistem terhubung.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- KELAS -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <div>
+              <span class="card-label">
+                KELAS
+              </span>
+
+              <h3>
+                Kelas Saya
+              </h3>
+            </div>
+
+            <button>
+              Kelola
+            </button>
+
+          </div>
+
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              🏫
+            </div>
+
+            <strong>
+              Belum ada kelas
+            </strong>
+
+            <p>
+              Kelas yang Anda ajar akan tampil
+              di bagian ini.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- QUICK ACTION -->
+      <div class="quick-section">
+
+        <div class="section-heading">
+
+          <span>
+            AKSES CEPAT
+          </span>
+
+          <h2>
+            Mulai Pembelajaran
+          </h2>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+
+          <button class="quick-card">
+
+            <div>
+              📚
+            </div>
+
+            <strong>
+              Buat Materi
+            </strong>
+
+            <span>
+              Tambahkan materi pembelajaran baru
+            </span>
+
+          </button>
+
+
+          <button class="quick-card">
+
+            <div>
+              🖥️
+            </div>
+
+            <strong>
+              Buat Praktikum
+            </strong>
+
+            <span>
+              Buat praktik jaringan interaktif
+            </span>
+
+          </button>
+
+
+          <button class="quick-card">
+
+            <div>
+              📝
+            </div>
+
+            <strong>
+              Buat Tugas
+            </strong>
+
+            <span>
+              Berikan tugas kepada siswa
+            </span>
+
+          </button>
+
+
+          <button class="quick-card">
+
+            <div>
+              📢
+            </div>
+
+            <strong>
+              Pengumuman
+            </strong>
+
+            <span>
+              Kirim informasi kepada siswa
+            </span>
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    function toggleSidebar() {
+
+      document
+        .querySelector(".sidebar")
+        .classList.toggle("show");
+
+    }
+
+
+    function logout() {
+
+      const yakin =
+        confirm(
+          "Apakah Anda yakin ingin keluar?"
+        );
+
+      if (yakin) {
+
+        window.location.href =
+          "../login.html";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+                       </html>
